@@ -1,0 +1,81 @@
+[class*="zocial-"]:before {
+  color: black;
+  display: inline-block;
+  font-family: 'zocial', sans-serif;
+  width: 2em;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url(images/bg1.jpg);
+  color: gray;
+  font-size: 20px;
+}
+
+#logo {
+  width: 200px;
+  height: 80px;
+  margin: -70px 50px -150px 50px;
+    
+}
+
+h5 { 
+  font-weight: normal;
+}
+footer {
+  text-align: center;
+  margin: 20px;
+}
+ul{
+    width: 100%
+    float:right;
+    background-color:black;
+    text-align: center;
+    }
+
+.style {
+  display: inline-block;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size:14px; 
+}
+
+a {
+  text-decoration: none;
+  color: #616161;
+  text-align: center;
+  color:aliceblue;
+  font-family: 'Crete Round', serif;
+  font-size: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: deepskyblue;
+}
+
+.article_heading {
+  font-size: 55px;
+  text-align: center;
+  padding: 5px 10px;
+  padding: 5px 10px;
+  font-family: 'Crete Round', serif;
+}
+.hr-rule {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8c8c inset;
+  padding: 5px 10px;
+}
+.sectionclass{
+    
+}
+#myCarousel .nav a small {
+    display:block;
+}
+#myCarousel .nav {
+	background:#eee;
+}
+#myCarousel .nav a {
+    border-radius:0px;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    </head>  
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+</style>
+<body>
+<div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="logo" src="images/logo1.png" alt="logo">
+            </div>
+            
+            <div class="col-md-6 text-right">
+                <h4 id="heading">sehaj.83@gmail.com</h4>
+                <h5 id="heading2">Tel: 416-414-9194</h5>
+            </div>
+            
+        </div>
+        <div class="hr-rule">
+                 <hr>
+             </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li class="style"><a href="index.html">Home</a></li>
+                    <li class="style"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="style"><a href="">Services</a></li>
+                    <li class="style"><a href="">About</a></li>
+                    <li class="style"><a href="">Blog</a></li>
+                    <li class="style"><a href="">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+              <div class="hr-rule">
+                 <hr>
+             </div>
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>Graphics</h1>
+  
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="images/Portfolio/p1.png" style="width:100%">
+    <img src="images/Portfolio/p2.png" style="width:100%">
+    <img src="images/Portfolio/p3.png" style="width:100%">
+    <img src="images/Portfolio/p4.png" style="width:100%">
+    <img src="images/Portfolio/p5.png" style="width:100%">
+    <img src="images/Portfolio/p6.png" style="width:100%">
+    <img src="images/Portfolio/p7.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/Portfolio/p8.png" style="width:100%">
+    <img src="images/Portfolio/p9.png" style="width:100%">
+    <img src="images/Portfolio/p10.png" style="width:100%">
+    <img src="images/Portfolio/p11.png" style="width:100%">
+    <img src="images/Portfolio/p12.png" style="width:100%">
+    <img src="images/Portfolio/p13.png" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="images/Portfolio/p14.png" style="width:100%">
+    <img src="images/Portfolio/p15.png" style="width:100%">
+    <img src="images/Portfolio/p16.png" style="width:100%">
+    <img src="images/Portfolio/p17.png" style="width:100%">
+    <img src="images/Portfolio/p18.png" style="width:100%">
+    <img src="images/Portfolio/p19.png" style="width:100%">
+    <img src="images/Portfolio/p20.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/Portfolio/p21.png" style="width:100%">
+    <img src="images/Portfolio/p22.png" style="width:100%">
+    <img src="images/Portfolio/p23.png" style="width:100%">
+    <img src="images/Portfolio/p24.png" style="width:100%">
+    <img src="images/Portfolio/p25.png" style="width:100%">
+    <img src="images/Portfolio/p26.png" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "100%";  // IE10
+        elements[i].style.flex = "100%";
+    }
+}
+
+// Two images side by side
+function two() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "50%";  // IE10
+        elements[i].style.flex = "50%";
+    }
+}
+
+// Four images side by side
+function four() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "25%";  // IE10
+        elements[i].style.flex = "25%";
+    }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
